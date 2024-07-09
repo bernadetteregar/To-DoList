@@ -1,0 +1,110 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TASK"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterButton"
+        android:queryHint="Search tasks"
+        android:iconifiedByDefault="false"
+        android:layout_marginBottom="8dp"
+        />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FILTER"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/incompleteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incompleted"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/filterButton"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/incompleteTasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/incompleteTitle" />
+
+    <TextView
+        android:id="@+id/completedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPLETED TASK"
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/incompleteTasksRecyclerView"
+        android:clickable="true"
+        android:focusable="true"
+        android:drawableEnd="@drawable/completed_24"
+        android:textColor="@color/gray"
+        android:drawableTint="@color/gray"
+        android:drawablePadding="8dp"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/completedTasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/completedTitle"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/todoListRecycleView"
+        android:backgroundTint="@color/design_default_color_background"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        android:textColor="?colorOnPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:iconTint="?colorOnPrimary"
+        android:backgroundTint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/dateFilterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FILTER BY DATE"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/filterButton"
+        android:backgroundTint="@color/colorPrimary" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/taskCellContainer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:contentDescription="@string/checkbox"
+            android:id="@+id/completedButton"
+            android:layout_marginHorizontal="15dp"
+            android:src="@drawable/unchecked_24"
+            android:background="?attr/selectableItemBackground"
+            android:buttonTint="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="@string/place_holder"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dueDate"
+            android:text="@string/place_holder"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_gravity="center"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/edit_24"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/delete"
+            />
+
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/ic_delete"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/delete"
+            />
+        
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
